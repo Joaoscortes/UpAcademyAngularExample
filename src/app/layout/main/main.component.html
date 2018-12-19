@@ -1,3 +1,8 @@
-<p>
-  main works!
-</p>
+<div class="row">
+  <h3 class="mr-auto" translate>Translate example</h3>
+  <button (click)="changeLang('pt')">PT</button>
+  <button (click)="changeLang('en')">EN</button>
+</div>
+<div>{{ 'HELLO' | translate:param }}</div>
+<div [translate]="'HELLO'" [translateParams]="{value: 'Joao'}"></div>
+<div translate [translateParams]="{value: 'Joao'}">HELLO</div>

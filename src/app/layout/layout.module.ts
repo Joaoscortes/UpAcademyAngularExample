@@ -8,6 +8,7 @@ import { ProductComponent } from './product/product.component';
 import { ShelfComponent } from './shelf/shelf.component';
 
 import { HeaderComponent, TablesComponent } from '../shared';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent, TablesComponent } from '../shared';
   ],
   imports: [
     CommonModule,
-    LayoutRoutingModule
+    LayoutRoutingModule,
+    TranslateModule
   ]
 })
 export class LayoutModule { }
