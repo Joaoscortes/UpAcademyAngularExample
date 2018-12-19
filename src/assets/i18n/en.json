@@ -1,4 +1,5 @@
 {
 	"HELLO": "Hello {{value}}",
-	"Translate example": "Translate example"
+	"Translate example": "Translate example",
+	"translate example": "Green"
 }

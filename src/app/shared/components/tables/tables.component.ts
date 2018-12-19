@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TablesComponent implements OnInit {
   @Input()  header: any;
-  @Input()  data: any;
+  @Input()  data$: any;
   @Input()  theme = 'table-dark';
 
   constructor() { }

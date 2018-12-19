@@ -8,6 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class MainComponent implements OnInit {
   param = {value: 'Joao'};
+  op1 = 'p1';
+  op2 = 'p2';
 
   constructor(
     private translate: TranslateService

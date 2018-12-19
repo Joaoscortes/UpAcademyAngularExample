@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let row of data | async">
+      <tr *ngFor="let row of data$ | async">
         <td *ngFor="let col of header">
           {{row[col]}}
         </td>
