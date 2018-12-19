@@ -6,8 +6,8 @@
     "start": "ng serve",
     "init": "ng serve -o",
     "build": "ng build",
-    "build:prod": "ng build --prod",
-    "show": "ng build --prod && http-server ./dist -p 3200",
+    "showlocal": "ng build --prod && http-server ./dist -p 3200",
+    "gitpages": "ng build --prod --base-href https://sequessu.github.io/UpAcademyAngularExample/ && ngh -no-silent",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
