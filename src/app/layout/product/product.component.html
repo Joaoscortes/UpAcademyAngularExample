@@ -1,0 +1,3 @@
+<h2>My Products <button type="button" class="btn btn-primary right" (click)="updateProducts()"> Update </button></h2>
+
+<app-tables [header]='["id","iva","pvp","discountValue"]' [data]='products$' [theme]='"table-bordered"'></app-tables>
