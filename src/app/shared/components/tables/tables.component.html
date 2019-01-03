@@ -9,7 +9,7 @@
     </thead>
     <tbody>
       <tr *ngFor="let row of data$ | async">
-        <td *ngFor="let col of header">
+        <td *ngFor="let col of header" (click)="clickRow(row)">
           {{row[col]}}
         </td>
       </tr>

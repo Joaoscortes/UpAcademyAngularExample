@@ -7,3 +7,31 @@
 <div>{{ 'HELLO' | translate:param }}</div>
 <div [translate]="'HELLO'" [translateParams]="{value: 'Joao'}"></div>
 <div translate [translateParams]="{value: 'Joao'}">HELLO</div>
+
+<ngui-map center="{{position}}"></ngui-map>
+
+<br>
+<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+<button type="button" class="btn btn-primary" (click)="openModal(template2)">Create template modal</button>
+<ng-template #template>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal template</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
+<ng-template #template2>
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal template 2</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is a modal.
+  </div>
+</ng-template>
