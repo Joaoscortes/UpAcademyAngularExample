@@ -27,6 +27,6 @@ export class ProductComponent implements OnInit {
   }
 
   clickRow(product) {
-    this.router.navigate(['/product-detail', product.id]);
+    this.router.navigate(['/product', product.id]);
   }
 }

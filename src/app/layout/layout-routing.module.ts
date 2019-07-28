@@ -10,18 +10,18 @@ const routes: Routes = [
   {
     path: '', component: LayoutComponent,
     children: [
-        {
-            path: '', component: MainComponent
-        },
-        {
-            path: 'product', component: ProductComponent
-        },
-        {
-            path: 'product-detail/:id', component: ProductDetailComponent
-        },
-        {
-            path: 'shelf', component: ShelfComponent
-        },
+      {
+        path: '', component: MainComponent
+      },
+      {
+        path: 'product', component: ProductComponent
+      },
+      {
+        path: 'product/:id', component: ProductDetailComponent
+      },
+      {
+        path: 'shelf', component: ShelfComponent
+      },
     ]
   }
 ];
