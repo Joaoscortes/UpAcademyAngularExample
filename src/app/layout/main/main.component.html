@@ -11,8 +11,8 @@
 <ngui-map center="{{position}}"></ngui-map>
 
 <br>
-<button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
-<button type="button" class="btn btn-primary" (click)="openModal(template2)">Create template modal</button>
+<button type="button" class="btn btn-primary" (click)="openModal(template)">{{ 'p1' | translate }}</button>
+<button type="button" class="btn btn-primary" (click)="openModal(template2)">{{ 'p1' | translate }}</button>
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left">Modal template</h4>

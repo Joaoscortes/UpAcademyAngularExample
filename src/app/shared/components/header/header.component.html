@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand mb-0 h1" routerLink="">Layout navigation</a>
+  <a class="navbar-brand mb-0 h1" routerLink="" translate>Layout navigation</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
     aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -7,15 +7,15 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-item nav-link" [routerLinkActive]="['active']" routerLink="/product">Product</a>
+        <a class="nav-item nav-link" [routerLinkActive]="['active']" routerLink="/product" translate>Product</a>
       </li>
       <li class="nav-item">
-        <a class="nav-item nav-link" [routerLinkActive]="['active']" routerLink="/shelf">Shelf</a>
+        <a class="nav-item nav-link" [routerLinkActive]="['active']" routerLink="/shelf" translate>Shelf</a>
       </li>
     </ul>
   </div>
   <span class="navbar-text mx-3">
     {{name}}
   </span>
-  <button class="btn btn-outline-dark" (click)="logout()">Logout</button>
+  <button class="btn btn-outline-dark" (click)="logout()" translate>Logout</button>
 </nav>

@@ -22,7 +22,7 @@ export class ProductApiService {
         'id': 1,
         'name': 'Atum',
         'pvp': 12,
-        'iva': 13,
+        'iva': 23,
         'discountValue': 0
       }, {
         'id': 2,
