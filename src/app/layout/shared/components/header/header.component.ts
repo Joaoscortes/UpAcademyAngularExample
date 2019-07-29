@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { AccountApiService } from '../../services/account-api.service';
+import { AccountApiService } from '../../../../core/services/account/account-api.service';
 
 @Component({
   selector: 'app-header',

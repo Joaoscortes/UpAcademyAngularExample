@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 
-import { ProductApiService } from './product-api.service';
+import { ProductApiService } from '../product/product-api.service';
 
 @Injectable({
   providedIn: 'root'
