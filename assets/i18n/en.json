@@ -1,6 +1,12 @@
 {
 	"HELLO": "Hello {{value}}",
+	"Layout navigation": "Layout navigation",
+	"Logout": "Logout",
+	"My Products": "My Products",
+	"Product": "Product",
+	"Shelf": "Shelf",
 	"Translate example": "Translate example",
+	"Update Products": "Update Products",
 	"p1": "Create template modal",
 	"translate example": "Green"
 }
