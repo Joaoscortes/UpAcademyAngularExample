@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
+import { Router } from '@angular/router';
+
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import { Product, DataService, ProductApiService } from '../../core';
-import { Router } from '@angular/router';
-import { BsModalRef, BsModalService } from 'ngx-bootstrap';
-
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { ProductNewComponent } from './product-new/product-new.component';
 
 @Component({

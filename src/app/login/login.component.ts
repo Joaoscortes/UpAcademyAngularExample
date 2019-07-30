@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Account } from '../core/models';
 import { Router } from '@angular/router';
 
-import { AccountApiService } from '../core';
+import { AccountApiService, Account } from '../core';
 
 @Component({
   selector: 'app-login',

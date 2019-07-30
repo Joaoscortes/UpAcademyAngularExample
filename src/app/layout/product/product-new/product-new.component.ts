@@ -1,5 +1,7 @@
 import { Component, EventEmitter } from '@angular/core';
+
 import { BsModalRef } from 'ngx-bootstrap';
+
 import { Product } from 'src/app/core';
 
 @Component({

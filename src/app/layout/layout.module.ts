@@ -1,19 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedModule } from './shared/shared.module';
+import { FormsModule } from '@angular/forms';
+
 import { ModalModule } from 'ngx-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NguiMapModule } from '@ngui/map';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { LayoutComponent } from './layout.component';
+import { SharedModule } from './shared/shared.module';
 import { LayoutRoutingModule } from './layout-routing.module';
+
+import { LayoutComponent } from './layout.component';
 import { MainComponent } from './main/main.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
-import { ShelfComponent } from './shelf/shelf.component';
-import { FormsModule } from '@angular/forms';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductNewComponent } from './product/product-new/product-new.component';
+import { ShelfComponent } from './shelf/shelf.component';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,9 @@ import { ProductNewComponent } from './product/product-new/product-new.component
   ],
   imports: [
     CommonModule,
+    SharedModule,
     LayoutRoutingModule,
     TranslateModule,
-    SharedModule,
     FormsModule,
     FontAwesomeModule,
     ModalModule.forRoot(),

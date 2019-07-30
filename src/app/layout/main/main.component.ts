@@ -1,4 +1,5 @@
 import { Component, OnInit, TemplateRef } from '@angular/core';
+
 import { TranslateService } from '@ngx-translate/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
@@ -9,7 +10,7 @@ import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
-  param = {value: 'Joao'};
+  param = { value: 'Joao' };
   op1 = 'p1';
   op2 = 'p2';
   modalRef: BsModalRef;
@@ -29,9 +30,9 @@ export class MainComponent implements OnInit {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  changeLang(lang: string ) {
+  changeLang(lang: string) {
     this.translate.use(lang);
   }
 
