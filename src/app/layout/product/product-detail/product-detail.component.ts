@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { DataService, Product } from 'src/app/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataService, Product, ProductApiService } from 'src/app/core';
 
 @Component({
   selector: 'app-product-detail',
@@ -9,10 +9,13 @@ import { DataService, Product } from 'src/app/core';
 })
 export class ProductDetailComponent implements OnInit {
   public product: Product;
+  public msg: string;
 
   constructor(
     private dataService: DataService,
-    private route: ActivatedRoute
+    private productApi: ProductApiService,
+    private route: ActivatedRoute,
+    private router: Router
   ) {
     this.route.params.subscribe(
       params => {
@@ -22,6 +25,23 @@ export class ProductDetailComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  update() {
+    this.productApi.update(this.product).subscribe(
+      () => {
+        this.msg = 'Product Updated';
+      }
+    );
+  }
+
+  delete() {
+    this.productApi.delete(this.product.id).subscribe(
+      () => {
+        this.dataService.updateProducts();
+        this.router.navigate(['/product']);
+      }
+    );
   }
 
 }

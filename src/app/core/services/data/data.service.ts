@@ -17,7 +17,7 @@ export class DataService {
   }
 
   public updateProducts() {
-    this.productApi.getProducts().subscribe(
+    this.productApi.getAll().subscribe(
       (res: any) => {
         this.products = res;
         this.products$.next(res);

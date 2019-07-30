@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
 
-import { Product, DataService } from '../../core';
+import { Product, DataService, ProductApiService } from '../../core';
 import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
 
@@ -20,6 +20,7 @@ export class ProductComponent implements OnInit {
 
   constructor(
     private dataService: DataService,
+    private productApi: ProductApiService,
     private router: Router,
     private modalService: BsModalService
   ) {
@@ -39,9 +40,13 @@ export class ProductComponent implements OnInit {
 
   public openCreateModal() {
     this.modalRef = this.modalService.show(ProductNewComponent);
-    this.modalRef.content.event.subscribe(data => {
-      console.log('New Product :', data);
-      this.modalRef.hide();
+    this.modalRef.content.event.subscribe(product => {
+      this.productApi.create(product).subscribe(
+        () => {
+          this.dataService.updateProducts();
+          this.modalRef.hide();
+        }
+      );
     });
   }
 }

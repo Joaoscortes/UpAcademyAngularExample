@@ -1,8 +1,8 @@
 export class Product {
-    'id': string;
-    'name': string;
+    'id'?: number;
     'iva': number;
     'pvp': number;
+    'discount': number;
     constructor(data?: any) {
         Object.assign(this, data);
     }

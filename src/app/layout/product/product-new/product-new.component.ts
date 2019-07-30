@@ -14,6 +14,7 @@ export class ProductNewComponent {
   constructor(public bsModalRef: BsModalRef) {
     this.product.iva = 23;
     this.product.pvp = 12;
+    this.product.discount = 0;
   }
 
   triggerEvent() {

@@ -1,5 +1,9 @@
-<p>
-  product-detail works! Id: {{product.id}} Name: {{product.name}}
-</p>
-<button routerLink="/product" class="btn btn-primary w-100">Back to Products
-</button>
+<div class="text-center">
+  <input class="w-100 p-1 m-1" name="iva" type="number" [(ngModel)]="product.iva" placeholder="iva" />
+  <input class="w-100 p-1 m-1" name="pvp" type="number" [(ngModel)]="product.pvp" placeholder="pvp" />
+  <input class="w-100 p-1 m-1" name="discount" type="number" [(ngModel)]="product.discount" placeholder="discount" />
+  <p>{{msg}}</p>
+</div>
+<button (click)="update()" class="btn btn-success w-100 m-1">Update</button>
+<button (click)="delete()" class="btn btn-danger w-100 m-1">Delete</button>
+<button routerLink="/product" class="btn btn-primary w-100 m-1">Back to Products</button>
