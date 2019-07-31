@@ -17,8 +17,7 @@ export class HeaderComponent implements OnInit {
     this.name = accountApi.getCurrentName();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   public logout() {
     this.accountApi.logout();

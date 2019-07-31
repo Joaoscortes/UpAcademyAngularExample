@@ -21,8 +21,7 @@ export class LoginComponent implements OnInit {
     this.account.password = 'admin';
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   public login() {
     this.accountApi.login(this.account).subscribe(
@@ -34,5 +33,4 @@ export class LoginComponent implements OnInit {
       }
     );
   }
-
 }

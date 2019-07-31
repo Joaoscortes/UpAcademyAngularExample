@@ -11,6 +11,8 @@ import { Product } from '../../models';
 })
 export class ProductApiService {
   private apiUrl = 'http://localhost:8080/stockmanagement/api/products/';
+
+  // GitPages Data
   private simulation: Array<any> = [
     {
       'id': 1,

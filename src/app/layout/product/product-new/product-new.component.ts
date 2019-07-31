@@ -13,7 +13,9 @@ export class ProductNewComponent {
 
   public product: Product = new Product();
   public event: EventEmitter<any> = new EventEmitter();
-  constructor(public bsModalRef: BsModalRef) {
+  constructor(
+    public bsModalRef: BsModalRef
+  ) {
     this.product.iva = 23;
     this.product.pvp = 12;
     this.product.discount = 0;

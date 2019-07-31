@@ -13,8 +13,7 @@ export class TablesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   clickRow(row) {
     this.clickedRow.emit(row);

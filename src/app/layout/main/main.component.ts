@@ -3,6 +3,7 @@ import { Component, OnInit, TemplateRef } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { BsModalService } from 'ngx-bootstrap/modal';
 import { BsModalRef } from 'ngx-bootstrap/modal/bs-modal-ref.service';
+import { DataService } from 'src/app/core';
 
 @Component({
   selector: 'app-main',
@@ -19,7 +20,8 @@ export class MainComponent implements OnInit {
 
   constructor(
     private translate: TranslateService,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    private dataService: DataService
   ) {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -38,5 +40,9 @@ export class MainComponent implements OnInit {
 
   openModal(template: TemplateRef<any>) {
     this.modalRef = this.modalService.show(template);
+  }
+
+  updateProducts() {
+    this.dataService.updateProducts();
   }
 }

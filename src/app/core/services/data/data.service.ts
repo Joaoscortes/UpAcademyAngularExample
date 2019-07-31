@@ -13,6 +13,7 @@ export class DataService {
   constructor(
     private productApi: ProductApiService
   ) {
+    // this.products$.subscribe((a) => console.log('products$ on DataService', JSON.stringify(a)));
     this.updateProducts();
   }
 

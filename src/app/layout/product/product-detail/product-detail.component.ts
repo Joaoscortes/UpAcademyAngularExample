@@ -21,12 +21,10 @@ export class ProductDetailComponent implements OnInit {
     this.route.params.subscribe(
       params => {
         this.product = this.dataService.getProductById(Number(params.id));
-        console.log(this.product);
       });
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   update() {
     this.productApi.update(this.product).subscribe(

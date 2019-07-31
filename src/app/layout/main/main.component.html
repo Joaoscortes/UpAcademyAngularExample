@@ -13,6 +13,9 @@
 <br>
 <button type="button" class="btn btn-primary" (click)="openModal(template)">{{ 'p1' | translate }}</button>
 <button type="button" class="btn btn-primary" (click)="openModal(template2)">{{ 'p1' | translate }}</button>
+<button type="button" class="btn btn-primary right" (click)="updateProducts()" translate>
+  Update Products
+</button>
 <ng-template #template>
   <div class="modal-header">
     <h4 class="modal-title pull-left">Modal template</h4>

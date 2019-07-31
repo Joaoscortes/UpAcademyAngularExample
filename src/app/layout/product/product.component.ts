@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ReplaySubject } from 'rxjs';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { ReplaySubject, Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
 import { BsModalRef, BsModalService } from 'ngx-bootstrap';
@@ -13,8 +13,9 @@ import { ProductNewComponent } from './product-new/product-new.component';
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.scss']
 })
-export class ProductComponent implements OnInit {
+export class ProductComponent implements OnInit, OnDestroy {
   public products$: ReplaySubject<Product[]>;
+  private subscriptionProducts: Subscription;
   public modalRef: BsModalRef;
   public iconNew = faPlus;
 
@@ -25,9 +26,13 @@ export class ProductComponent implements OnInit {
     private modalService: BsModalService
   ) {
     this.products$ = this.dataService.products$;
+    this.subscriptionProducts = this.products$.subscribe((a) => console.log('products$ on ProductComponent', JSON.stringify(a)));
   }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  ngOnDestroy() {
+    this.subscriptionProducts.unsubscribe();
   }
 
   updateProducts() {
