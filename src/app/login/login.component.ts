@@ -1,3 +1,5 @@
+import { environment } from '../../environments/environment';
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -26,6 +28,11 @@ export class LoginComponent implements OnInit {
   public login() {
     this.accountApi.login(this.account).subscribe(
       (account: any) => {
+        if (!environment.production) {
+          account = account[0];
+          account.name = account.username;
+          this.accountApi.setCurrentAccount(account);
+        }
         this.router.navigate(['/']);
       },
       (error) => {
