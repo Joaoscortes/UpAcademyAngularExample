@@ -17,7 +17,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 Run `npm run showlocal` to build the project in production, and run http-server.
 Need `npm install http-server -g`
 
-Run `npm run gitpages` to build the project in production, and upload to [Gitpages](https://sequessu.github.io/UpAcademyAngularExample/).
+Run `npm run gitpages` to build the project in production, and upload to [Gitpages](https://joaoscortes.github.io/UpAcademyAngularExample/).
 Need `npm install -g angular-cli-ghpages`
 
 ## Running unit tests
