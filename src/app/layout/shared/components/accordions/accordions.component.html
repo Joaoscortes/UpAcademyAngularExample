@@ -1,0 +1,20 @@
+<div class="input-group mb-3 col-12 col-sm-3 pl-0">
+  <input type="text" class="form-control" [(ngModel)]="filterValue" (keyup)="displayData()" *ngIf="search"
+    placeholder="Search...">
+</div>
+<accordion [isAnimated]="true">
+  <accordion-group heading="{{item.name}}" *ngFor="let item of datafiltered$ | async">
+    This content is straight in the template.
+    <button (click)="clickRow(item)" class="btn btn-warning">Edit</button>
+  </accordion-group>
+</accordion>
+<nav *ngIf="pagination">
+  <ul class="pagination justify-content-center">
+    <button [disabled]="pagesArray().length == 1 || currentPage == 1" class="btn p-0"
+      (click)="previousPage()">Previous</button>
+    <button *ngFor="let i of pagesArray()" class="btn" [ngClass]="{ 'btn-primary': currentPage == i+1 }"
+      (click)="toPage(i+1)">{{i+1}}</button>
+    <button [disabled]="pagesArray().length == 1 || currentPage == pagesArray().length" class="btn p-0"
+      (click)="nextPage()">Next</button>
+  </ul>
+</nav>

@@ -3,15 +3,13 @@ import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'app-tables',
-  templateUrl: './tables.component.html',
-  styleUrls: ['./tables.component.scss']
+  selector: 'app-accordions',
+  templateUrl: './accordions.component.html',
+  styleUrls: ['./accordions.component.scss']
 })
-export class TablesComponent implements OnInit {
+export class AccordionsComponent implements OnInit {
 
-  @Input() header: any;
   @Input() data$: any;
-  @Input() theme = 'table-dark';
   @Input() pagination = false;
   @Input() search = false;
 

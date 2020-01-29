@@ -3,24 +3,29 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { AccordionModule } from 'ngx-bootstrap/accordion';
+import { FormsModule } from '@angular/forms';
 
 import { HeaderComponent, TablesComponent } from './components';
-import { FormsModule } from '@angular/forms';
+import { AccordionsComponent } from './components/accordions/accordions.component';
 
 @NgModule({
     declarations: [
         HeaderComponent,
-        TablesComponent
+        TablesComponent,
+        AccordionsComponent
     ],
     imports: [
         CommonModule,
         RouterModule,
         TranslateModule,
-        FormsModule
+        FormsModule,
+        AccordionModule.forRoot()
     ],
     exports: [
         HeaderComponent,
-        TablesComponent
+        TablesComponent,
+        AccordionsComponent
     ]
 })
 export class SharedModule { }

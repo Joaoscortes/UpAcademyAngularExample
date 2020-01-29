@@ -10,3 +10,6 @@
 <app-tables [header]='["name","id","iva","pvp","discount"]' [data$]='products$' [theme]='"table-bordered"'
         [search]='true' [pagination]='true' (clickedRow)='clickRow($event)'>
 </app-tables>
+
+<app-accordions [data$]='products$' [search]='true' [pagination]='true' (clickedRow)='clickRow($event)'>
+</app-accordions>
