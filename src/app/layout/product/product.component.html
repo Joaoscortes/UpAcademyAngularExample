@@ -7,5 +7,6 @@
         </button>
 </h2>
 
-<app-tables [header]='["id","iva","pvp","discount"]' [data$]='products$' [theme]='"table-bordered"'
-        (clickedRow)='clickRow($event)'></app-tables>
+<app-tables [header]='["name","id","iva","pvp","discount"]' [data$]='products$' [theme]='"table-bordered"'
+        [search]='true' [pagination]='true' (clickedRow)='clickRow($event)'>
+</app-tables>

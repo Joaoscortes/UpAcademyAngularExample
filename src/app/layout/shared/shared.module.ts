@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { HeaderComponent, TablesComponent } from './components';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { HeaderComponent, TablesComponent } from './components';
     imports: [
         CommonModule,
         RouterModule,
-        TranslateModule
+        TranslateModule,
+        FormsModule
     ],
     exports: [
         HeaderComponent,

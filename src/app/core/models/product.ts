@@ -1,4 +1,5 @@
 export class Product {
+    'name'?: string;
     'id'?: number;
     'iva': number;
     'pvp': number;

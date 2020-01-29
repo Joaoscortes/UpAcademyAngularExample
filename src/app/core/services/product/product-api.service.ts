@@ -11,6 +11,8 @@ import { Product } from '../../models';
 })
 export class ProductApiService {
   private apiUrl = 'http://localhost:8080/stockmanagement/api/products/';
+  // private production = environment.production;
+  private production = true;
 
   // GitPages Data
   private simulation: Array<any> = [
@@ -47,7 +49,7 @@ export class ProductApiService {
   ) { }
 
   public getAll() {
-    if (environment.production) {
+    if (this.production) {
       // Simulate data
       const data: ReplaySubject<any> = new ReplaySubject(1);
       data.next(this.simulation);
@@ -59,7 +61,7 @@ export class ProductApiService {
   }
 
   public create(product: Product) {
-    if (environment.production) {
+    if (this.production) {
       // Simulate data
       product.id = this.simulationId++;
       this.simulation.push(product);
@@ -73,7 +75,7 @@ export class ProductApiService {
   }
 
   public get(id: number) {
-    if (environment.production) {
+    if (this.production) {
 
     } else {
       // Request to Jax-rs Api
@@ -82,7 +84,7 @@ export class ProductApiService {
   }
 
   public update(product: Product) {
-    if (environment.production) {
+    if (this.production) {
       // Simulate data
       for (let index = 0; index < this.simulation.length; index++) {
         const element = this.simulation[index];
@@ -99,7 +101,7 @@ export class ProductApiService {
   }
 
   public delete(id: number) {
-    if (environment.production) {
+    if (this.production) {
       // Simulate data
       const index = this.simulation.map(function (e) { return e.id; }).indexOf(id);
       if (index !== -1) { this.simulation.splice(index, 1); }
